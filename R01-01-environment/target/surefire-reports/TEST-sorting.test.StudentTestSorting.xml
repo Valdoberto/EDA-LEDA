@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="sorting.test.StudentTestSorting" time="0.25" tests="5" errors="5" skipped="0" failures="0" flakes="0">
+  <properties>
+    <property name="java.specification.version" value="25"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/home/valdoberto.noberto.monteiro.da.silva/Documentos/EDA E LEDA/R01-01-environment/target/test-classes:/home/valdoberto.noberto.monteiro.da.silva/Documentos/EDA E LEDA/R01-01-environment/target/classes:/home/valdoberto.noberto.monteiro.da.silva/.m2/repository/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar:/home/valdoberto.noberto.monteiro.da.silva/.m2/repository/org/junit/jupiter/junit-jupiter/6.1.3/junit-jupiter-6.1.3.jar:/home/valdoberto.noberto.monteiro.da.silva/.m2/repository/org/junit/jupiter/junit-jupiter-api/6.1.3/junit-jupiter-api-6.1.3.jar:/home/valdoberto.noberto.monteiro.da.silva/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/home/valdoberto.noberto.monteiro.da.silva/.m2/repository/org/junit/platform/junit-platform-commons/6.1.3/junit-platform-commons-6.1.3.jar:/home/valdoberto.noberto.monteiro.da.silva/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/valdoberto.noberto.monteiro.da.silva/.m2/repository/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar:/home/valdoberto.noberto.monteiro.da.silva/.m2/repository/org/junit/jupiter/junit-jupiter-params/6.1.3/junit-jupiter-params-6.1.3.jar:/home/valdoberto.noberto.monteiro.da.silva/.m2/repository/org/junit/jupiter/junit-jupiter-engine/6.1.3/junit-jupiter-engine-6.1.3.jar:/home/valdoberto.noberto.monteiro.da.silva/.m2/repository/org/junit/platform/junit-platform-engine/6.1.3/junit-platform-engine-6.1.3.jar:/home/valdoberto.noberto.monteiro.da.silva/.m2/repository/br/edu/ufcg/leda/leda-commons/2.0.0-SNAPSHOT/leda-commons-2.0.0-SNAPSHOT.jar:/home/valdoberto.noberto.monteiro.da.silva/.m2/repository/com/google/code/gson/gson/2.14.0/gson-2.14.0.jar:/home/valdoberto.noberto.monteiro.da.silva/.m2/repository/com/google/errorprone/error_prone_annotations/2.48.0/error_prone_annotations-2.48.0.jar:/home/valdoberto.noberto.monteiro.da.silva/.m2/repository/org/apache/maven/shared/maven-invoker/3.3.0/maven-invoker-3.3.0.jar:/home/valdoberto.noberto.monteiro.da.silva/.m2/repository/org/apache/maven/shared/maven-shared-utils/3.4.2/maven-shared-utils-3.4.2.jar:/home/valdoberto.noberto.monteiro.da.silva/.m2/repository/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar:/home/valdoberto.noberto.monteiro.da.silva/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/home/valdoberto.noberto.monteiro.da.silva/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar:/home/valdoberto.noberto.monteiro.da.silva/.m2/repository/org/jdom/jdom2/2.0.6.1/jdom2-2.0.6.1.jar:"/>
+    <property name="java.vm.vendor" value="Ubuntu"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://ubuntu.com/"/>
+    <property name="os.name" value="Linux"/>
+    <property name="java.vm.specification.version" value="25"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="BR"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-25-openjdk-amd64/lib"/>
+    <property name="sun.java.command" value="/home/valdoberto.noberto.monteiro.da.silva/Documentos/EDA E LEDA/R01-01-environment/target/surefire/surefirebooter-20260925120830392_3.jar /home/valdoberto.noberto.monteiro.da.silva/Documentos/EDA E LEDA/R01-01-environment/target/surefire 2026-09-25T12-08-29_836-jvmRun1 surefire-20260925120830392_1tmp surefire_0-20260925120830392_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/home/valdoberto.noberto.monteiro.da.silva/Documentos/EDA E LEDA/R01-01-environment/target/test-classes:/home/valdoberto.noberto.monteiro.da.silva/Documentos/EDA E LEDA/R01-01-environment/target/classes:/home/valdoberto.noberto.monteiro.da.silva/.m2/repository/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar:/home/valdoberto.noberto.monteiro.da.silva/.m2/repository/org/junit/jupiter/junit-jupiter/6.1.3/junit-jupiter-6.1.3.jar:/home/valdoberto.noberto.monteiro.da.silva/.m2/repository/org/junit/jupiter/junit-jupiter-api/6.1.3/junit-jupiter-api-6.1.3.jar:/home/valdoberto.noberto.monteiro.da.silva/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/home/valdoberto.noberto.monteiro.da.silva/.m2/repository/org/junit/platform/junit-platform-commons/6.1.3/junit-platform-commons-6.1.3.jar:/home/valdoberto.noberto.monteiro.da.silva/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/valdoberto.noberto.monteiro.da.silva/.m2/repository/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar:/home/valdoberto.noberto.monteiro.da.silva/.m2/repository/org/junit/jupiter/junit-jupiter-params/6.1.3/junit-jupiter-params-6.1.3.jar:/home/valdoberto.noberto.monteiro.da.silva/.m2/repository/org/junit/jupiter/junit-jupiter-engine/6.1.3/junit-jupiter-engine-6.1.3.jar:/home/valdoberto.noberto.monteiro.da.silva/.m2/repository/org/junit/platform/junit-platform-engine/6.1.3/junit-platform-engine-6.1.3.jar:/home/valdoberto.noberto.monteiro.da.silva/.m2/repository/br/edu/ufcg/leda/leda-commons/2.0.0-SNAPSHOT/leda-commons-2.0.0-SNAPSHOT.jar:/home/valdoberto.noberto.monteiro.da.silva/.m2/repository/com/google/code/gson/gson/2.14.0/gson-2.14.0.jar:/home/valdoberto.noberto.monteiro.da.silva/.m2/repository/com/google/errorprone/error_prone_annotations/2.48.0/error_prone_annotations-2.48.0.jar:/home/valdoberto.noberto.monteiro.da.silva/.m2/repository/org/apache/maven/shared/maven-invoker/3.3.0/maven-invoker-3.3.0.jar:/home/valdoberto.noberto.monteiro.da.silva/.m2/repository/org/apache/maven/shared/maven-shared-utils/3.4.2/maven-shared-utils-3.4.2.jar:/home/valdoberto.noberto.monteiro.da.silva/.m2/repository/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar:/home/valdoberto.noberto.monteiro.da.silva/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/home/valdoberto.noberto.monteiro.da.silva/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar:/home/valdoberto.noberto.monteiro.da.silva/.m2/repository/org/jdom/jdom2/2.0.6.1/jdom2-2.0.6.1.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/valdoberto.noberto.monteiro.da.silva"/>
+    <property name="user.language" value="pt"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2026-08-18"/>
+    <property name="java.home" value="/usr/lib/jvm/java-25-openjdk-amd64"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/home/valdoberto.noberto.monteiro.da.silva/Documentos/EDA E LEDA/R01-01-environment"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="surefire.real.class.path" value="/home/valdoberto.noberto.monteiro.da.silva/Documentos/EDA E LEDA/R01-01-environment/target/surefire/surefirebooter-20260925120830392_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="25.0.4.1+1-1-24.04.4-Ubuntu"/>
+    <property name="user.name" value="valdoberto.noberto.monteiro.da.silva"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="7.0.0-14-generic"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="localRepository" value="/home/valdoberto.noberto.monteiro.da.silva/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://bugs.launchpad.net/ubuntu/+source/openjdk-25"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="25.0.4.1"/>
+    <property name="user.dir" value="/home/valdoberto.noberto.monteiro.da.silva/Documentos/EDA E LEDA/R01-01-environment"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Ubuntu"/>
+    <property name="java.vm.version" value="25.0.4.1+1-1-24.04.4-Ubuntu"/>
+    <property name="stdin.encoding" value="UTF-8"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="69.0"/>
+  </properties>
+  <testcase name="testSort01" classname="sorting.test.StudentTestSorting" time="0.138">
+    <error message="Unresolved compilation problems: &#10;	Type mismatch: cannot convert from T to int&#10;	i cannot be resolved to a variable&#10;	i cannot be resolved to a variable&#10;	i cannot be resolved to a variable&#10;	The operator &lt; is undefined for the argument type(s) T, int&#10;	i cannot be resolved to a variable&#10;	Type mismatch: cannot convert from T to int&#10;	i cannot be resolved to a variable&#10;	The method swap(T[], T, int) is undefined for the type SelectionSort&lt;T&gt;&#10;" type="java.lang.Error"><![CDATA[java.lang.Error: 
+Unresolved compilation problems: 
+	Type mismatch: cannot convert from T to int
+	i cannot be resolved to a variable
+	i cannot be resolved to a variable
+	i cannot be resolved to a variable
+	The operator < is undefined for the argument type(s) T, int
+	i cannot be resolved to a variable
+	Type mismatch: cannot convert from T to int
+	i cannot be resolved to a variable
+	The method swap(T[], T, int) is undefined for the type SelectionSort<T>
+
+	at sorting.simpleSorting.SelectionSort.sort(SelectionSort.java:16)
+	at sorting.AbstractSorting.sort(AbstractSorting.java:8)
+	at sorting.test.StudentTestSorting.genericTest(StudentTestSorting.java:75)
+	at sorting.test.StudentTestSorting.testSort01(StudentTestSorting.java:82)
+]]></error>
+  </testcase>
+  <testcase name="testSort02" classname="sorting.test.StudentTestSorting" time="0.008">
+    <error message="Unresolved compilation problems: &#10;	Type mismatch: cannot convert from T to int&#10;	i cannot be resolved to a variable&#10;	i cannot be resolved to a variable&#10;	i cannot be resolved to a variable&#10;	The operator &lt; is undefined for the argument type(s) T, int&#10;	i cannot be resolved to a variable&#10;	Type mismatch: cannot convert from T to int&#10;	i cannot be resolved to a variable&#10;	The method swap(T[], T, int) is undefined for the type SelectionSort&lt;T&gt;&#10;" type="java.lang.Error"><![CDATA[java.lang.Error: 
+Unresolved compilation problems: 
+	Type mismatch: cannot convert from T to int
+	i cannot be resolved to a variable
+	i cannot be resolved to a variable
+	i cannot be resolved to a variable
+	The operator < is undefined for the argument type(s) T, int
+	i cannot be resolved to a variable
+	Type mismatch: cannot convert from T to int
+	i cannot be resolved to a variable
+	The method swap(T[], T, int) is undefined for the type SelectionSort<T>
+
+	at sorting.simpleSorting.SelectionSort.sort(SelectionSort.java:16)
+	at sorting.AbstractSorting.sort(AbstractSorting.java:8)
+	at sorting.test.StudentTestSorting.genericTest(StudentTestSorting.java:75)
+	at sorting.test.StudentTestSorting.testSort02(StudentTestSorting.java:87)
+]]></error>
+  </testcase>
+  <testcase name="testSort03" classname="sorting.test.StudentTestSorting" time="0.008">
+    <error message="Unresolved compilation problems: &#10;	Type mismatch: cannot convert from T to int&#10;	i cannot be resolved to a variable&#10;	i cannot be resolved to a variable&#10;	i cannot be resolved to a variable&#10;	The operator &lt; is undefined for the argument type(s) T, int&#10;	i cannot be resolved to a variable&#10;	Type mismatch: cannot convert from T to int&#10;	i cannot be resolved to a variable&#10;	The method swap(T[], T, int) is undefined for the type SelectionSort&lt;T&gt;&#10;" type="java.lang.Error"><![CDATA[java.lang.Error: 
+Unresolved compilation problems: 
+	Type mismatch: cannot convert from T to int
+	i cannot be resolved to a variable
+	i cannot be resolved to a variable
+	i cannot be resolved to a variable
+	The operator < is undefined for the argument type(s) T, int
+	i cannot be resolved to a variable
+	Type mismatch: cannot convert from T to int
+	i cannot be resolved to a variable
+	The method swap(T[], T, int) is undefined for the type SelectionSort<T>
+
+	at sorting.simpleSorting.SelectionSort.sort(SelectionSort.java:16)
+	at sorting.AbstractSorting.sort(AbstractSorting.java:8)
+	at sorting.test.StudentTestSorting.genericTest(StudentTestSorting.java:75)
+	at sorting.test.StudentTestSorting.testSort03(StudentTestSorting.java:92)
+]]></error>
+  </testcase>
+  <testcase name="testSort04" classname="sorting.test.StudentTestSorting" time="0.006">
+    <error message="Unresolved compilation problems: &#10;	Type mismatch: cannot convert from T to int&#10;	i cannot be resolved to a variable&#10;	i cannot be resolved to a variable&#10;	i cannot be resolved to a variable&#10;	The operator &lt; is undefined for the argument type(s) T, int&#10;	i cannot be resolved to a variable&#10;	Type mismatch: cannot convert from T to int&#10;	i cannot be resolved to a variable&#10;	The method swap(T[], T, int) is undefined for the type SelectionSort&lt;T&gt;&#10;" type="java.lang.Error"><![CDATA[java.lang.Error: 
+Unresolved compilation problems: 
+	Type mismatch: cannot convert from T to int
+	i cannot be resolved to a variable
+	i cannot be resolved to a variable
+	i cannot be resolved to a variable
+	The operator < is undefined for the argument type(s) T, int
+	i cannot be resolved to a variable
+	Type mismatch: cannot convert from T to int
+	i cannot be resolved to a variable
+	The method swap(T[], T, int) is undefined for the type SelectionSort<T>
+
+	at sorting.simpleSorting.SelectionSort.sort(SelectionSort.java:16)
+	at sorting.AbstractSorting.sort(AbstractSorting.java:8)
+	at sorting.test.StudentTestSorting.genericTest(StudentTestSorting.java:75)
+	at sorting.test.StudentTestSorting.testSort04(StudentTestSorting.java:97)
+]]></error>
+  </testcase>
+  <testcase name="testSort05" classname="sorting.test.StudentTestSorting" time="0.006">
+    <error message="Unresolved compilation problems: &#10;	Type mismatch: cannot convert from T to int&#10;	i cannot be resolved to a variable&#10;	i cannot be resolved to a variable&#10;	i cannot be resolved to a variable&#10;	The operator &lt; is undefined for the argument type(s) T, int&#10;	i cannot be resolved to a variable&#10;	Type mismatch: cannot convert from T to int&#10;	i cannot be resolved to a variable&#10;	The method swap(T[], T, int) is undefined for the type SelectionSort&lt;T&gt;&#10;" type="java.lang.Error"><![CDATA[java.lang.Error: 
+Unresolved compilation problems: 
+	Type mismatch: cannot convert from T to int
+	i cannot be resolved to a variable
+	i cannot be resolved to a variable
+	i cannot be resolved to a variable
+	The operator < is undefined for the argument type(s) T, int
+	i cannot be resolved to a variable
+	Type mismatch: cannot convert from T to int
+	i cannot be resolved to a variable
+	The method swap(T[], T, int) is undefined for the type SelectionSort<T>
+
+	at sorting.simpleSorting.SelectionSort.sort(SelectionSort.java:16)
+	at sorting.AbstractSorting.sort(AbstractSorting.java:8)
+	at sorting.test.StudentTestSorting.genericTest(StudentTestSorting.java:75)
+	at sorting.test.StudentTestSorting.testSort05(StudentTestSorting.java:102)
+]]></error>
+  </testcase>
+</testsuite>

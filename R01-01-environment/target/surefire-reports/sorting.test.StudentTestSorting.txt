@@ -1,0 +1,94 @@
+-------------------------------------------------------------------------------
+Test set: sorting.test.StudentTestSorting
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 5, Skipped: 0, Time elapsed: 0.250 s <<< FAILURE! -- in sorting.test.StudentTestSorting
+sorting.test.StudentTestSorting.testSort01 -- Time elapsed: 0.138 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	Type mismatch: cannot convert from T to int
+	i cannot be resolved to a variable
+	i cannot be resolved to a variable
+	i cannot be resolved to a variable
+	The operator < is undefined for the argument type(s) T, int
+	i cannot be resolved to a variable
+	Type mismatch: cannot convert from T to int
+	i cannot be resolved to a variable
+	The method swap(T[], T, int) is undefined for the type SelectionSort<T>
+
+	at sorting.simpleSorting.SelectionSort.sort(SelectionSort.java:16)
+	at sorting.AbstractSorting.sort(AbstractSorting.java:8)
+	at sorting.test.StudentTestSorting.genericTest(StudentTestSorting.java:75)
+	at sorting.test.StudentTestSorting.testSort01(StudentTestSorting.java:82)
+
+sorting.test.StudentTestSorting.testSort02 -- Time elapsed: 0.008 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	Type mismatch: cannot convert from T to int
+	i cannot be resolved to a variable
+	i cannot be resolved to a variable
+	i cannot be resolved to a variable
+	The operator < is undefined for the argument type(s) T, int
+	i cannot be resolved to a variable
+	Type mismatch: cannot convert from T to int
+	i cannot be resolved to a variable
+	The method swap(T[], T, int) is undefined for the type SelectionSort<T>
+
+	at sorting.simpleSorting.SelectionSort.sort(SelectionSort.java:16)
+	at sorting.AbstractSorting.sort(AbstractSorting.java:8)
+	at sorting.test.StudentTestSorting.genericTest(StudentTestSorting.java:75)
+	at sorting.test.StudentTestSorting.testSort02(StudentTestSorting.java:87)
+
+sorting.test.StudentTestSorting.testSort03 -- Time elapsed: 0.008 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	Type mismatch: cannot convert from T to int
+	i cannot be resolved to a variable
+	i cannot be resolved to a variable
+	i cannot be resolved to a variable
+	The operator < is undefined for the argument type(s) T, int
+	i cannot be resolved to a variable
+	Type mismatch: cannot convert from T to int
+	i cannot be resolved to a variable
+	The method swap(T[], T, int) is undefined for the type SelectionSort<T>
+
+	at sorting.simpleSorting.SelectionSort.sort(SelectionSort.java:16)
+	at sorting.AbstractSorting.sort(AbstractSorting.java:8)
+	at sorting.test.StudentTestSorting.genericTest(StudentTestSorting.java:75)
+	at sorting.test.StudentTestSorting.testSort03(StudentTestSorting.java:92)
+
+sorting.test.StudentTestSorting.testSort04 -- Time elapsed: 0.006 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	Type mismatch: cannot convert from T to int
+	i cannot be resolved to a variable
+	i cannot be resolved to a variable
+	i cannot be resolved to a variable
+	The operator < is undefined for the argument type(s) T, int
+	i cannot be resolved to a variable
+	Type mismatch: cannot convert from T to int
+	i cannot be resolved to a variable
+	The method swap(T[], T, int) is undefined for the type SelectionSort<T>
+
+	at sorting.simpleSorting.SelectionSort.sort(SelectionSort.java:16)
+	at sorting.AbstractSorting.sort(AbstractSorting.java:8)
+	at sorting.test.StudentTestSorting.genericTest(StudentTestSorting.java:75)
+	at sorting.test.StudentTestSorting.testSort04(StudentTestSorting.java:97)
+
+sorting.test.StudentTestSorting.testSort05 -- Time elapsed: 0.006 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	Type mismatch: cannot convert from T to int
+	i cannot be resolved to a variable
+	i cannot be resolved to a variable
+	i cannot be resolved to a variable
+	The operator < is undefined for the argument type(s) T, int
+	i cannot be resolved to a variable
+	Type mismatch: cannot convert from T to int
+	i cannot be resolved to a variable
+	The method swap(T[], T, int) is undefined for the type SelectionSort<T>
+
+	at sorting.simpleSorting.SelectionSort.sort(SelectionSort.java:16)
+	at sorting.AbstractSorting.sort(AbstractSorting.java:8)
+	at sorting.test.StudentTestSorting.genericTest(StudentTestSorting.java:75)
+	at sorting.test.StudentTestSorting.testSort05(StudentTestSorting.java:102)
+
