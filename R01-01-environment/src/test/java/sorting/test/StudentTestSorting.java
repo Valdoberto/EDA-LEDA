@@ -9,6 +9,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import sorting.AbstractSorting;
+import sorting.simpleSorting.BubbleSort;
+import sorting.simpleSorting.InsertionSort;
 import sorting.simpleSorting.SelectionSort;
 
 public class StudentTestSorting {

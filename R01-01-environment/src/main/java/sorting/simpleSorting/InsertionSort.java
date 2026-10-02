@@ -1,7 +1,7 @@
 package sorting.simpleSorting;
 
 import sorting.AbstractSorting;
-
+import static util.Util.swap;
 /**
  * As the insertion sort algorithm iterates over the array, it makes the
  * assumption that the visited positions are already sorted in ascending order,
@@ -10,9 +10,17 @@ import sorting.AbstractSorting;
  */
 public class InsertionSort<T extends Comparable<T>> extends AbstractSorting<T> {
 
-	@Override
+	
+@Override
 	public void sort(T[] array, int leftIndex, int rightIndex) {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Not Implemented yet!");
+		if (leftIndex >= 0 && rightIndex < array.length && leftIndex <= rightIndex){
+			for(int i = leftIndex + 1; i <= rightIndex; i++){
+				int j = i;
+				while (j > leftIndex && array[j - 1].compareTo(array[j]) > 0) {
+					swap(array, j, j -1);
+					j--;
+				}
+			}
+		}
 	}
 }
