@@ -1,5 +1,7 @@
 package sorting.variationsOfBubblesort;
 
+import static util.Util.swap;
+
 import sorting.AbstractSorting;
 
 public class RecursiveBubbleSort<T extends Comparable<T>> extends
@@ -15,19 +17,19 @@ public class RecursiveBubbleSort<T extends Comparable<T>> extends
 	 */
 	@Override
 	public void sort(T[] array, int leftIndex, int rightIndex) {
-		if (leftIndex >= 0 && rightIndex < array.length && leftIndex <= rightIndex) {
-			
-			if (array.length == 1) {
-				return;
-				// analisar se tem como remover esse return.
+		if (leftIndex >= 0 && rightIndex < array.length && leftIndex < rightIndex) {
+
+			boolean trocou = false;
+
+			for (int i = leftIndex + 1; i <= rightIndex; i++) {
+				if (array[i - 1].compareTo(array[i]) > 0) {
+					swap(array, i - 1, i);
+					trocou = true;
+				}
 			}
-
-			boolean trocou = true;
-			while (trocou) {
-				trocou = false;
-
+			if (trocou) {
+				sort(array, leftIndex, rightIndex - 1);
 			}
-
 		}
 	}
 }
