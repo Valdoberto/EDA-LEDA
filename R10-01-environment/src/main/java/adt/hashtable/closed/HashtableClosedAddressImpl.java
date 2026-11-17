@@ -1,0 +1,140 @@
+package adt.hashtable.closed;
+
+import java.util.LinkedList;
+
+import util.Util;
+import adt.hashtable.hashfunction.HashFunctionClosedAddress;
+import adt.hashtable.hashfunction.HashFunction;
+import adt.hashtable.hashfunction.HashFunctionClosedAddressMethod;
+import adt.hashtable.hashfunction.HashFunctionFactory;
+
+public class HashtableClosedAddressImpl<T> extends
+		AbstractHashtableClosedAddress<T> {
+
+	/**
+	 * A hash table with closed address works with a hash function with closed
+	 * address. Such a function can follow one of these methods: DIVISION or
+	 * MULTIPLICATION. In the DIVISION method, it is useful to change the size
+	 * of the table to an integer that is prime. This can be achieved by
+	 * producing such a prime number that is bigger and close to the desired
+	 * size.
+	 * 
+	 * For doing that, you have auxiliary methods: Util.isPrime and
+	 * getPrimeAbove as documented bellow.
+	 * 
+	 * The length of the internal table must be the immediate prime number
+	 * greater than the given size (or the given size, if it is already prime).
+	 * For example, if size=10 then the length must
+	 * be 11. If size=20, the length must be 23. You must implement this idea in
+	 * the auxiliary method getPrimeAbove(int size) and use it.
+	 * 
+	 * @param desiredSize
+	 * @param method
+	 */
+
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	public HashtableClosedAddressImpl(int desiredSize,
+			HashFunctionClosedAddressMethod method) {
+		int realSize = desiredSize;
+
+		if (method == HashFunctionClosedAddressMethod.DIVISION) {
+			realSize = this.getPrimeAbove(desiredSize); // real size must the
+														// the immediate prime
+														// above
+		}
+		initiateInternalTable(realSize);
+		for (int i = 0; i < table.length; i++) {
+			table[i] = new LinkedList<T>();
+		}
+		HashFunction function = HashFunctionFactory.createHashFunction(method,
+				realSize);
+		this.hashFunction = function;
+	}
+
+	// AUXILIARY
+	/**
+	 * It returns the prime number that is closest (and greater) to the given
+	 * number.
+	 * If the given number is prime, it is returned.
+	 * You can use the method Util.isPrime to check if a number is
+	 * prime.
+	 */
+
+	protected int getPrimeAbove(int number) {
+		int candidate = number;
+
+		while (!Util.isPrime(candidate)) {
+			candidate++;
+		}
+
+		return candidate;
+	}
+
+	@Override
+	@SuppressWarnings("unchecked")
+	public void insert(T element) {
+		if (element != null && this.indexOf(element) == -1) {
+			HashFunctionClosedAddress<T> funcao = (HashFunctionClosedAddress<T>) this.hashFunction;
+			int posicao = funcao.hash(element);
+			LinkedList<T> lista = (LinkedList<T>) this.table[posicao];
+
+			if (!lista.isEmpty()) {
+				this.COLLISIONS++;
+			}
+
+			lista.add(element);
+			this.elements++;
+		}
+	}
+
+	@Override
+	@SuppressWarnings("unchecked")
+	public void remove(T element) {
+		if (element != null) {
+			HashFunctionClosedAddress<T> funcao = (HashFunctionClosedAddress<T>) this.hashFunction;
+			int posicao = funcao.hash(element);
+			LinkedList<T> lista = (LinkedList<T>) this.table[posicao];
+
+			if (lista.remove(element)) {
+				this.elements--;
+			}
+		}
+	}
+
+	@Override
+	@SuppressWarnings("unchecked")
+	public T search(T element) {
+		T result = null;
+
+		if (element != null) {
+			HashFunctionClosedAddress<T> funcao = (HashFunctionClosedAddress<T>) this.hashFunction;
+			int posicao = funcao.hash(element);
+			LinkedList<T> lista = (LinkedList<T>) this.table[posicao];
+			int indexLista = lista.indexOf(element);
+
+			if (indexLista != -1) {
+				result = lista.get(indexLista);
+			}
+		}
+
+		return result;
+	}
+
+	@Override
+	@SuppressWarnings("unchecked")
+	public int indexOf(T element) {
+		int index = -1;
+
+		if (element != null) {
+			HashFunctionClosedAddress<T> function = (HashFunctionClosedAddress<T>) this.hashFunction;
+			int posicao = function.hash(element);
+			LinkedList<T> lista = (LinkedList<T>) this.table[posicao];
+
+			if (lista.contains(element)) {
+				index = posicao;
+			}
+		}
+
+		return index;
+	}
+}
